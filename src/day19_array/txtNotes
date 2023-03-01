@@ -1,0 +1,94 @@
+Array
+storing multiple information of similar type to one object
+instead of using multiple variables we can use an array to group that information
+Declaring array:
+declaring with values/elements
+
+    dataType[] name = {element, elm, elm ,etc};
+    String[] words = {"java", "testing", "Friday"};
+declare an empty array - the array will have default values based on type
+
+    dataType[] name = new datatType[size]
+    String[] strs = new String[5];
+
+    default values of different types:
+        whole number: 0
+        floating number: 0.0
+        boolean: false
+        object: null
+Access Elements
+elements have an index, start from 0
+arrayName[index] --> use this to read a value: use information from that array
+Changing/Reassigning Elements
+arrayName[index] = value --> use this to write to the array: put information into the array
+Printing an array
+Trying to print the array reference will not show the elements, but instead some hash about the object in the memory
+
+To print an array we need to use the utility class and its method:
+    Arrays.toString(arr) -> returns a String format of the array
+For each loop
+a loop used to iterate elements from a collection/data structure
+
+we know arrays at this point
+
+    for(datatype variableName: array) {
+
+    }
+
+flow: goes from the first element to the last always, every iteration the variableName represent every element, one element at a time
+
+the variableName is the same as arrayName[i] in a for loop where i is the index from 0 to the end of the array
+Note: The for each loop can only be used when reading/using information from the array, but whenever specific indexes are needed, or the array needs to be modified then the for each loop cannot be used
+
+Multidimensional arrays
+        Allows the array to hold other arrays. The element of a multidimensional array is a single array
+
+        single array
+                int [] a = { 1, 2, 3};
+
+        2D array
+                int [][] arr = {
+                        {1, 2, 3},
+                        {4, 5, 6}
+                }
+
+                arr[1] -> {4, 5, 6}
+                arr[1] = { 10, 30 10};
+
+                        To access the elements we will still use indexes. In this case the elements are other arrays
+
+                - To create a 2d array you can use single array variables, or make the single arrays right away in the declaration
+
+        Print the multidimensional arrays:
+
+                Arrays.deepToString(arr);
+declaring 2D array
+	datatType [][] arrayName = new dataType[x][z];
+
+		where x is how many elements the 2D array has - number of arrays
+
+		where z is the size of each inner array
+			-> is optional to define. If it is not defined then the inner arrays sizes do not matter, they can be different
+
+	datatType [][] arrayName = { arrayName1, arrayName2, etc}
+
+	dataType [][] arrayName = { {element, element, element, etc}, {element, element, element, etc}, {element, element, element, etc} };
+Iterating through a 2D array:
+	for each: (using double array above)
+
+		for(double[] eachInner : prices){ <-- elements of prices are 1D, double arrays. In the loop we are calling them eachInner
+
+			for(double eachNum : eachInner){
+				// now we have access to each price number using eachNum variable
+			}
+
+		}
+
+	traditional:
+
+		for(int i = 0; i < prices.length; i++){
+
+			for(int j = 0; j < prices[i].length; j++){ // prices[i].length --> length of each inner array
+					// here we have access to each price number using prices[i][j]
+			}
+		}

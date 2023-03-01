@@ -1,0 +1,104 @@
+ArrayList
+	ArrayList is a class. Part of the collection framework
+		-> different collections help to work with many data
+
+    class is located in java.util package
+
+	ArrayList uses arrays internally
+
+	ArrayList allows duplicate elements
+	ArrayList is ordered. You can access the elements by indexes. Order of the elements is known(insertion order)
+
+	* ArrayList is a dynamic array
+		-> in ArrayList the size is NOT fixed
+		the size will grow and shrink when needed
+
+	Syntax:
+	    ArrayList<DATATYPE> name = new ArrayList<>();
+Array vs ArrayList
+
+	Array
+		fixed size
+		use both used with primitive & non primitive types
+		object type
+		no methods
+		in general takes less memory
+		Need to use Arrays.toString() to print the array
+
+	ArrayList
+		dynamic size
+		only use object types (non primitive types)
+		object type
+		has methods to use the data
+		in general takes more memory
+		can be printed using only print statement, no need for anything else
+ArrayList Methods:
+
+	size(): returns the number of elements
+		return int
+
+		last index: size() - 1
+
+	add(element): adds the element to the end of the ArrayList
+		return boolean -> returns true, we don't usually use this return value.
+
+	add(int, element): adds the element at the given index number. All the other elements move position
+
+	get(int): return the element at the given index number
+		return element
+
+	clear(): removes all the elements from the ArrayList
+
+	remove(int): removes the element at the given index. All elements shift over
+		returns the element that is removed
+
+			-> if you try to remove an index that doesn't exist: out of bounds
+
+	remove(element): remove the element that was defined from the ArrayList.
+		returns boolean
+			true: if the element was removed
+			false: if the element was not removed - if the element did not exist
+
+	isEmpty(): checks if there is any elements in the ArrayList
+		returns boolean
+			true: ArrayList is empty, no elements
+			false: if there is any elements
+
+	contains(element): checks if the ArrayList has the given element
+		returns boolean
+			true: ArrayList has the element
+			false: ArrayList does not have the element
+
+	equals(ArrayList) checks if the given ArrayList is equal to the ArrayList using the method
+		return boolean
+			true: if the two ArrayList are the same, which means they have the same elements, same order
+			false: if the ArrayList are not the same
+
+    indexOf(element): returns the index of the given element. The index returned will be the first occurrence of the element
+    	returns int
+
+    set(int, element): replace the element at the given index with the given new element
+
+Creating ArrayList in different ways
+
+	ArrayList<type> name = new ArrayList<>();
+
+		creates an empty ArrayList
+
+	ArrayList<type> name = new ArrayList<>( collection type );
+
+		collection type: there is a collection framework that has many components
+			ArrayList is a collection type
+
+		ArrayList<type> name = new ArrayList<>( arraylist object );
+
+	Using Arrays.asList()
+
+		parameters: an array ( var arg )
+		returns: collection type
+
+	Use both parts together to create an ArrayList with values
+
+	ArrayList<type> name = new ArrayList<>( Arrays.asList() );
+	Ex: .asList("hello", "world", "Friday")
+		.asList(3, 4, 5, 1, 5, 5)

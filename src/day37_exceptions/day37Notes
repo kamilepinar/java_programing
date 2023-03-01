@@ -1,0 +1,100 @@
+Java Programming Day37
+
+Topics: Exceptions
+			- check vs unchecked
+			- try & catch
+
+		Error vs Exception
+
+package name: day37_exceptions
+
+
+
+unexpected event happens it calls exceptions.internet gitti, tekerlek patladi bunlar exceptions
+
+exception occurs during RUNTIME  OR COMPILE TIME
+
+THERE ARE 2 CATAGORIES OF EXCEPTION: checked and uncheck exception
+
+check is:   compile can check and compile give error immidiatly, but its hard with uncheck because compile can not check
+and it comes in run time like class cast exception. compile did not show as error it comes when we run time.
+
+uncheck:   Run time / zor/Is a relationshp with runtime Exception(Parent class)
+uncheck: String out of bound, class cast exception, null pointer
+
+check:compile time; easy to fix / they do not is A relation with RunTimeException class
+
+
+to prevent exception crash the program we must write code that detects and handles them
+Exceptions Topics:
+	1. Exceptions Intro
+	2. Checked & unchecked
+	3. Try & Cacth
+	4. Throws Keyword
+			try&catch vs throw
+	5. Throw keyword
+			throws vs throw
+	6. Custom Exception
+
+
+
+
+
+final vs finalize vs finally:interview question
+
+	final: keyword ==> unchangable
+
+	finalize: method ===> GC use it to collect the objects that are eligible for garbage collection
+
+	finally: block ===> can only used with try&catch
+
+
+Null pointer exception: (uncheck exception) reference type decide you can call method or not but object type decide the implementation if its null it does not
+get any error but but in tun time it will give expection
+
+aritmetikException:(encheck) division operator 100/0 /by zero olmaz
+
+RUNTYPE ARE ALL UNCHECK EXCPTION:bazilari
+class cast, illegal argument(numberFormat), aritmetic, index out of bound(Stringindex, ArrayIndex), null pointer
+
+
+COMPILE TIME EXCEPTION: iNTELJ ALWAYS TELL US WHAT IS IT,
+
+------------------------------------------------------------------------------------------
+ ERROR = Linkage Error, Virtual Machine Error (its system resources issue, they can not be recoverable. programers can not be detect, they are irricaverable)
+ Virtual machine Error: OutOfMemoryError - StackOverFlowError
+
+Error: Indicated an illigal operation is being perform
+occurs during run time only
+They can not be recoverd and not recommended to handle them
+exception is recoverable
+-------------------------------------------------------------------------------------------
+
+How to handle Exception:(check or unchecked)
+
+TRY & CATCH BLOCKS:
+its a solution for many exceptions, we only handle expection. they have to be together allthe time elseif  else gibi.
+
+try: the code that giving exception goes in that block
+catch: handle the exception if try block cant ( you give expection type, if not know RuntimeException) daha babalarini yazma runtime yeter
+you can give multiple catch block but the rule is parent exception class can not be place before child exception
+----------------------------------------------------------
+e.printStackTrace() : this method display the full details of exception after the executing the program
+mesela index out of bound oldu 4 indexli biseyeden 1000. indexi istedin yaziyor\
+bu sadece in the catch block you can use it
+
+
+getMessage(); : returns only brief description of the exception
+
+-------------------------------------------------------------------------
+Multi catch block, parent exception class can not be place before any of the catch block, and we give
+runTimeException e  at the end of catch block. because if its not catch any on the upper catch block runtime will catch for sure.
+
+--------------------------------------------------------------------------------
+
+FINALLY BLOCK:
+an optional block that can be given after last catch  block
+as long as program is crused, terminatinate. forcefully terminated than it wont get executed
+other wise it will always get executed
+
+even thog exception not handle not catch final block will get executed still.

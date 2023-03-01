@@ -1,0 +1,51 @@
+Collections
+	a utility class for collection types
+	located in java.util package
+
+	Collections.sort()
+	Collections.max()
+	Collections.min()
+	Collections.frequency()
+
+	others: shuffle, reverse, swap
+
+	Note: this is just a sample of the methods. For the full list check the documentation
+Bulk Operation Methods
+	the arguments of each methods are collection types
+
+	addAll(collection type): add all the elements from the given argument to the ArrayList
+
+	removeAll(collection type): removes every occurrence of every element from the given argument
+
+	containsAll(collection type): checks if every element from the given argument is in the ArrayList
+
+	retainAll(collection type): keeps all the defined elements, but deletes all the others
+
+Also ArrayList methods: arguments are different
+
+removeIf( lambda )
+
+to define the argument we will use a lambda expression
+
+syntax for lambda:
+
+	variable -> boolean expression(use that defined variable)
+
+forEach( lambda )
+
+	variable -> statement want to run with each element
+
+	-> this statement is not a boolean like it was for removeIf()
+
+Note: We will talk about laLambda expression
+                           function without a name
+
+                           can be created anywhere so we can use them to define the implementation of the abstract methods of functional interface
+
+                           syntax:
+                               () -> {};
+                               (parameters) -> {statements};
+
+                               Note: parenthesis for the parameters is not needed if there is only one parameters
+                               Note: curly brackets are not needed if there is only one statement
+                           Lmdba and how these methods were working towards the end of the course

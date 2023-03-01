@@ -1,0 +1,26 @@
+Collections Framework
+
+a group of interfaces and classes that define data structures that handle data differently.
+    They define how data is added, or read from etc, based on different algorithms and implementations
+Main interface of the framework
+Iterable: parent of the Collection interface. Allows data structures to be iterated with a for each loop. Defines the iterator method
+
+Collection: child of Iterable. The parent of the Collection types. Defines the main functions of a collection
+    ex: add, remove, size
+
+List: ordered(index), allows duplicates
+
+Set: unordered(no indexes), not allow duplicates
+    SortedSet: child of Set. has the idea of sorting
+
+List: ordered(index), allowed duplicates
+
+Queue: typically FIFO (First In First Out), but not necessarily(not always)
+
+    null not allowed because there are additional methods defined that return null
+
+    Deque: working with data from beginning and end of the collection
+        Ex: methods: addFirst, removeLast()
+
+Map: stores information using keys and values
+    DOES NOT INHERIT THE COLLECTION INTERFACE, but still considered a part o

@@ -1,0 +1,88 @@
+Topics: Exceptions Continue
+			- throws keyword
+			- throw keyword
+			- Custom Exception Class
+
+package name: day38_exceptions
+
+
+Exceptions: unwanted/unexpected events
+
+		Unchecked exceptions: occurs during the runtime
+
+						All the RuntimeExceptions are unchecked exception
+						unknown
+
+		Checked exceptions: occurs during the compile time. must be handled right away
+
+						All the non-RuntimeExceptions are checked exception
+						known
+
+ THROWABLE =( error and exceptions)
+Error vs Exceptions: Both are throwable, both can crash our program
+
+		Exceptions: can occur during the compile time and runtime
+					Occurs due to the issues within the program itself
+					Recoverable, can be handled
+
+
+
+
+		Error: only Occurs during the runtime// because its in virtual machine
+			   Occurs due to the lack/limit of the system resources
+			   Irrecoverable, not recommended to handle them
+
+
+
+Exception handlings: permanent solution, they handle them permanently
+
+		1. try & catch blocks: used for handling any checked & unchecked exception
+
+					try{
+						exception codes
+					}catch(ExceptionClass e){//e is local variable of the catch block its only work in here
+						e.printStackTrace();
+					}
+
+
+				multiple catch blocks: parent exception type can never be placed before child exception type
+
+				finally block: always get executed regardless of the exception is handled or not handled
+
+								System.exit(1)
+
+
+		2. throws keyword: used for handling "" checked exceptions "" ONLY/ Throws Only Temporary this is disadvantage
+		exception is not gone, the problem is not solve, its just ignoring the problem
+		advantage: faster, shorter clean code, try catch more block so its hard to read but throws shorter
+		dont use this for runtime(unchecked)exceptions
+
+parent should not place before child rules apply to thorws keyword to, if you throws interrupted exception, you should not pass exception parent of them first,
+						caller of the method will be responsible for handling the exception
+
+-----------------------------------------------------------------------------------------------------------------------
+
+throw: used for manually throwing exception//it create the exceptions throws handle the exceptions
+
+		syntax:
+			throw exceptionObject
+
+
+
+
+
+Custom Exception:
+	1. how to create custom unchecked exception?
+			by inheriting from RuntimeException class
+
+	2. how to create custom checked exception?
+			by inheriting from Exception class
+
+
+	RunTime exception example:classcast, illegalArgument, aritmetical,indexoutofbond,nullpointer
+	IOEXCEPTION : socketExceptions, FileNOtFound, EOFException
+
+
+	ERROR exp = Linkage and Virtual machine
+	    virtual machine = out ofMemory(FOR LOOPdoldurdu), StackOVerflowError
+
